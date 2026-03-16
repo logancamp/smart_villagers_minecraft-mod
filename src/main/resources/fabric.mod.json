@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "smart-villagers",
+  "version": "${version}",
+  "name": "smart-villagers",
+  "description": "Making villagers smarter with AI!",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/smart-villagers/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "me.logancamp.smartVillagers.client.SmartVillagersDataGenerator"
+    ],
+    "client": [
+      "me.logancamp.smartVillagers.client.SmartVillagersClient"
+    ],
+    "main": [
+      "me.logancamp.smartVillagers.SmartVillagers"
+    ]
+  },
+  "mixins": [
+    "smart-villagers.mixins.json",
+    {
+      "config": "smart-villagers.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
