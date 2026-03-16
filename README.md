@@ -21,3 +21,4 @@ Setup
 Notes
 - The AI helper must stay running while Minecraft is open.
 - Villager trade updates appear after reopening the trade menu.
+
